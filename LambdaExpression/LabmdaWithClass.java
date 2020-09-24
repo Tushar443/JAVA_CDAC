@@ -15,13 +15,16 @@ public class LabmdaWithClass {
 interface ImyLogic{
     void show();
 }
-class Employee {
+class Employee implements ImyLogic{
     private String name;
     private int age ;
 
     Employee(String name ,int age){
         this.name=name;
         this.age =age;
+    }
+    public void show(){
+
     }
 
     public int getAge(){
