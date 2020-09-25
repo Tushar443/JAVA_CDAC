@@ -18,6 +18,9 @@ class Q1{
         person e =new Employee();
         person e1 =new Manager();
         person e2 =new person();
+        e.show();
+        // e2.show();
+        // e3.show();
         
 
     }
