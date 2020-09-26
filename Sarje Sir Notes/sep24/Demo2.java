@@ -7,7 +7,9 @@ class Outer{
 }
 class Demo2{
 	public static void main(String args[]){
-		Outer.Foo ref = new Outer.Foo();
-		ref.m1();
+		 Outer.Foo ref = new Outer.Foo();
+		// Outer o =new Outer();
+		 ref.m1();
+		//Outer.Foo.m1();
 	}
 }
