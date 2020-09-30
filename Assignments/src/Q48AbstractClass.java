@@ -25,7 +25,6 @@ class Factorial extends Processor {
 	void process() {
 		for (double i = data; i > 1; i--) {
 			this.fact = this.fact * i;
-//			System.out.println(this.fact);
 		}
 	}
 

@@ -1,0 +1,361 @@
+1)What is Java ?
+ANS => Java is a programming language and computing platform first released by Sun Microsystems in 1995. 
+	There are lots of applications and websites that will not work unless you have Java installed, and more are created every day. 
+	Java is fast, secure, and reliable. 
+	From laptops to datacenters, game consoles to scientific supercomputers, cell phones to the Internet, Java is everywhere!
+2)Why Java is called as “Platform” ?
+ANS => it can run at any platform like MAC OS,Windows WROA = Write Once Run EveryWhere.
+3)What are the features of Java ?
+ANS=> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+4-A) What is pure Object Oriented Lainguage?
+ANS => 
+Pure Object Oriented Language or Complete Object Oriented Language are Fully Object Oriented Language which supports or have features 
+which treats everything inside program as objects. 
+It doesn’t support primitive datatype(like int, char, float, bool, etc.). There are seven qualities to be satisfied for a 
+programming language to be pure Object Oriented. They are:
+
+1= Encapsulation/Data Hiding
+2= Inheritance
+3= Polymorphism
+4= Abstraction
+5= All predefined types are objects
+6= All user defined types are objects
+7 =All operations performed on objects must be only through methods exposed at the objects.
+Example: Smalltalk
+
+
+4) is Java Pure-Object oriented Language ?
+	ANS=> Java supports property 1, 2, 3, 4 and 6 but fails to support property 5 and 7 given above. Java language is not a Pure Object Oriented Language as it contain these properties:
+
+	Primitive Data Type ex. int, long, bool, float, char, etc as Objects: Smalltalk is a “pure” object-oriented programming language unlike Java and C++ as there is no difference between values which are objects and values which are primitive types. In Smalltalk, primitive values such as integers, booleans and characters are also objects.
+	In Java, we have predefined types as non-objects (primitive types).
+	
+	int a = 5; 
+	System.out.print(a);
+	The static keyword:  When we declares a class as static then it can be used without the use of an object in Java. If we are using static function or static variable then we can’t call that function or variable by using dot(.) or class object defying object oriented feature.
+	Wrapper Class: Wrapper class provides the mechanism to convert primitive into object and object into primitive. In Java, you can use Integer, Float etc. instead of int, float etc. 
+	We can communicate with objects without calling their methods. ex. using arithmetic operators.
+	String s1 = "ABC" + "A" ;
+	Even using Wrapper classes does not make Java a pure OOP language, as internally it will use the operations like Unboxing and Autoboxing.
+	So if you create instead of int Integer and do any mathematical operation on it, under the hoods Java is going to use primitive type int only.
+
+	public class BoxingExample  
+	{ 
+    	public static void main(String[] args)  
+    	{ 
+            Integer i = new Integer(10); 
+            Integer j = new Integer(20); 
+            Integer k = new Integer(i.intValue() + j.intValue()); 
+            System.out.println("Output: "+ k); 
+    	} 
+	} 
+	In the above code, there are 2 problems where Java fails to work as pure OOP:
+
+	While creating Integer class you are using primitive type “int” i.e. numbers 10, 20.
+	While doing addition Java is using primitive type “int”.
+
+
+
+5)Which version of java have u learned? Name some of the new features added to it.
+ANS =>Java 8 Features
+Oracle released a new version of Java as Java 8 in March 18, 2014. It was a revolutionary release of the Java for software development platform.
+It includes various upgrades to the Java programming, JVM, Tools and libraries.
+
+Java 8 Programming Language Enhancements
+Java 8 provides following features for Java Programming:
+
+Lambda expressions,
+Method references,
+Functional interfaces,
+Stream API,
+Default methods,
+Base64 Encode Decode,
+Static methods in interface,
+Optional class,
+Collectors class,
+ForEach() method,
+Parallel array sorting,
+Nashorn JavaScript Engine,
+Parallel Array Sorting,
+Type and Repating Annotations,
+IO Enhancements,
+Concurrency Enhancements,
+JDBC Enhancements etc.
+
+
+6) What is native code?
+ANS=> 	Native code can also be distinguished from bytecode (sometimes called interpreted code), a form of code that can be said to run in a virtual machine 
+	(for example, the Java Virtual Machine). 
+	The virtual machine is a program that converts the platform-generalized bytecode into the native code that will run in a specific processor. 
+	Microsoft's .NET compilers for its Visual Basic, C#, and JavaScript languages produce bytecode (which Microsoft calls Intermediate Language). 
+	Java bytecode and Microsoft's Intermediate Language can be compiled into native code before execution by a just-in-time compiler for faster performance.
+
+
+
+7)What is the difference between  JDK and JRE?
+8)What is JVM ? What it does?
+9)Why JVM is called as “virtual machine”?
+10)What is the lifetime of Java Virtual Machine ?
+11)What are the main components of JVM? Explain them. Or Explain JVM Architecture.
+12) What is the job done by classloader ?
+13)Explain the hierarchy of  classloaders in java.
+14) What is the role played by Bytecode Verifier ?
+15) What are the memory areas allocated by JVM ?
+16) What is the difference between  Java compiler ( javac ) and JIT ?
+17) Is JRE different for different Platforms ?
+18) Difference between C++ and java in terms of object creation.
+19) What is the signature of main function in java ?
+20) Who invokes main() function ?
+21) Can we define more than one public class in a java source code ? what is the rule of public class and file name . ?
+22) Difference between path and classpath.
+ANS=>
+Explanation-:
+	Compiling the program- I have java program file Demo.java stored at location D:\Programs\Classes. 
+	Now I pointed location to D:\Programs\Classes in CMD and executed javac Demo.java command. System will understand javac with the help of PATH variable. 
+	Java program Demo.java is complied successfully because PATH is set correctly to %JAVA_HOME%\bin.
+
+	Running the program (class file)- Since class file has been generated at the same location D:\Programs\Classes, 
+	so we can run this class file by typing command java Demo as displayed in second line in the screenshot. 
+	Now system will find the class file with the help of CLASSPATH since my CLASSPATH variable has D:\Programs\Classes path.
+
+	It's not required to point class file location in CMD to run it. 
+	System will understand java command with the help of PATH variable and find that class using CLASSPATH variable to run it.
+
+	The path points to the location of the jre i.e. the java binary files such as the jvm and necessary libraries. 
+	The classpath points to the classes you developed so that the jvm can find them and load them when you run your product.
+	So essentially you need the path to find java so it can then find your classes and run them from the classpath.
+
+
+
+23) What is the rule for local member in java.
+ANS=> 	Local variables can not use any of the access levels as they exist inside the Method only.
+	Final is the only non access modifier that can be applied to local variable.
+	Local variables don’t get a default value, hence local variables need to be initiated before they can be used.
+	Static local variable is not allowed.  
+
+
+24) What is  .class file known as ?
+
+25) What is finalized() method ?
+ANS=> The java.lang.Object.finalize() is called by the garbage collector on an object when garbage collection determines that there are no more references to the object.
+	 A subclass overrides the finalize method to dispose of system resources or to perform other cleanup.
+
+Declaration
+Following is the declaration for java.lang.Object.finalize() method
+
+protected void finalize()
+
+Parameters
+Non
+
+Return Value
+This method does not return a value.
+
+Exception
+Throwable − the Exception raised by this method
+
+Example
+The following example shows the usage of lang.Object.finalize() method.
+
+import java.util.*;
+
+public class ObjectDemo extends GregorianCalendar {
+
+   public static void main(String[] args) {
+      try {
+         // create a new ObjectDemo object
+         ObjectDemo cal = new ObjectDemo();
+
+         // print current time
+         System.out.println("" + cal.getTime());
+
+         // finalize cal
+         System.out.println("Finalizing...");
+         cal.finalize();
+         System.out.println("Finalized.");
+
+      } catch (Throwable ex) {
+         ex.printStackTrace();
+      }
+   }
+}
+Let us compile and run the above program, this will produce the following result −
+
+Sat Sep 22 00:27:21 EEST 2012
+Finalizing...
+Finalized.
+
+
+26) Why there is no sizeof operator in java ?
+ANS=> Because the size of primitive types is explicitly mandated by the Java language. There is no variance between JVM implementations.
+Moreover, since allocation is done by the new operator depending on its argument there is no need to specify the amount of memory needed.
+It would sure be convenient sometimes to know how much memory an object will take so you could estimate things like max heap size requirements
+but I suppose the Java Language/Platform designers did not think it was a critical aspect.
+
+
+
+27) What kinds of programs u can develop using Java ?
+ANS=> Application servers
+Web applications
+Unit tests
+Mobile applications
+Desktop applications
+Enterprise applications
+
+Working in the cloud
+Exploring space at NASA
+Working with the Internet of Things
+Developing self-driving cars
+Helping doctors make virtual house calls with chatbots
+Performing big data analysis
+Getting your name on the big screen
+Making games
+Becoming a mad scientist
+Going back to school
+
+
+28) Difference between  C++ pointer and Java reference.
+ANS=> The real difference is, in C or C++ the term "pointer" strictly means an integer that happens to be the memory address of some data.
+	 Whereas in Java the term "reference" more closely matches the C++ "reference" concept. You can't work with the memory address directly even if you want to, but you use it the same way
+
+2nd AHS for above =>Java doesn’t have pointers; Java has references.
+		Reference: A reference is a variable that refers to something else and can be used as an alias for that something else.
+		Pointer: A pointer is a variable that stores a memory address, for the purpose of acting as an alias to what is stored at that address.
+		So, a pointer is a reference, but a reference is not necessarily a pointer. Pointers are a particular implementation of the concept of a reference, and the term tends to be used only for languages that give you direct access to the memory address.
+
+		Let’s discuss some keypoints about pointers and references in context of C/C++ and Java:
+
+		1= C/C++ allows pointer arithmetic but Java Pointers (References) not: The term “pointer” is strongly associated with the C/C++ concept of pointers, 	
+		which are variables which store memory addresses and can be modified arithmetically to point to arbitrary addresses.
+		2= In Java, pointers only exist as an implementation detail for References. A copy of the reference is copied to the stack of a called function, 
+		pointing to the same object as the calling function and allowing you to manipulate that object. However you cannot change the object the calling function refers to.
+		3= Java doesn’t support pointer explicitly,  But java uses pointer implicitly: Java use pointers for manipulations of references but these pointers are not available for outside use.
+		  Any operations implicitly done by the language are actually NOT visible.
+		4= Pointers can do arithmetic, References can’t: Memory access via pointer arithmetic is fundamentally unsafe and for safe guarding, 
+		Java has a robust security model and disallows pointer arithmetic for this reason. Users cannot manipulate pointers no matter what may ever is the case.
+		5= Pointing objects: In C, we can add or subtract address of a pointer to point to things. 
+		In Java, a reference points to one thing only. You can make a variable hold a different reference, but such c manipulations to pointers are not possible.
+		6= References are strongly typed:  Type of a reference is much more strictly controlled in Java than the type of a pointer is in C. 
+		In C you can have an int* and cast it to a char* and just re-interpret the memory at that location. 
+		That re-interpretation doesn’t work in Java: you can only interpret the object at the other end of the reference as something that it already is
+		(i.e. you can cast a Object reference to String reference only if the object pointed to is actually a String).
+		7= Manipulation of pointers can be dangerous:  On one hand, it can be good and flexible to have control over pointers by user 
+		but it may also prove to be dangerous. They may turn out to be big source of problems, because if used incorrectly they can easily break 
+		assumptions that your code is built around. And it’s pretty easy to use them incorrectly.
+
+
+ 
+29)U have reference type as a member of class. What is the default value it gets?
+ANS => NULL  The default value of a reference type variable is null when they are not initialized. Null means not refering to any object.
+30)What are the expressions allowed in switch block of java ?
+
+
+31)In a java source code there are 3 classes define  e.g  class A{} class B{} and class C{}. When u compile the source code how many .class files u get and what are their names ?
+32) What is java’s old name ?
+33) What are the technologies come under “Distributed Object System “ ?
+34) What do u mean by Java Enabled Browser, Web Server and Application Server?
+35) What is “this”? What is its importance?
+36) What is Unicode Character Set in Java ?
+
+37) Explain Java Execution Flow 
+
+
+
+SET 2
+
+1. What is instanceOf operator?
+2. Give an example of instanceOf operator.
+3. What is upcasting and downcasting?
+4. What is the risk involved in downcasting ? How instanceof operator provides solution for that?
+5. 
+Given, in C++, 
+MyClass m1;
+MyClass m2=m1; 
+And in Java,
+MyClass m1=new MyClass();
+MyClass m2=m1;
+6. In Java copy constructor is not provided implicitly. Can we provide it explicitly and if yes when exactly it will be called?
+7. How many types of inheritance allowed in java ?
+What is the difference?
+8. Why “Multiple Inheritance” is not supported in Java?
+9. Explain access modifiers in java.
+10. What is super keyword?
+11. What is @Override? What does it do?
+12. What are Overriding rules in java?
+13. What is Object class?
+14. What is “ClassCastException” ? What is the solution for that?
+15. Where can we apply final keyword in java ?
+16. Can a class be defined a both final and abstract?
+17. Explain “System.out.println”. 
+18. Explain “public static void main”.
+19. Can we use “this” with static member ?
+20. Explain static block or static initializer.
+21. Where have u seen an application of static block or initializer in java?
+22. What is non-static block?
+23. Can static member function access non-static data? 
+24. Can non-static member function access static data?
+25. Explain constructor invocation in case of inheritance.
+26. In case of inheritance, if parent class does not have no-arg constructor, what happens ? How do u solve the problem?
+27. In case of an array which variable is created automatically? Can u modify it? If no, why?
+28. What is Class in java?
+
+
+SET 3
+
+
+1. Explain abstract class in Java.
+2. What is the need of abstract class?
+3. Explain interface in Java8.
+4. Why do we need interfaces?
+5. Using interface reference we can invoke only those methods which are present in it.
+Given:
+
+interface myinterface
+{
+	void disp();
+}
+public class MyClass
+{
+	public static void main(String[] args)
+	{
+		myinterface m1,m2=null;
+		m1.disp();
+		m1.fun();
+		m1.toString();
+		m1.equals(m2);
+		m1.hashCode();
+	}
+}
+
+Which of the above invocations are illegal at compile-time?
+6. When to use interface and when to use abstract class? Explain with example.
+7. What is the difference between abstract class and interface in Java8?
+8. What are the default methods in Java8 interfaces?
+9. What is the actual use of “default” method in interface?
+10. Why do we need static methods in interface?
+11. Explain this vs super in case of constructor invocation.
+12. What do u mean by immutable class?
+13. How to create immutable class in java?
+14. Difference bet’n  StringBuilder and StringBuffer.
+15. When u try to print any reference variable in java, u get some meaningful output. What do u mean by this?
+16. Why can’t we instantiate abstract class?
+17. Can abstract class have constructors in Java?
+18. Can abstract classes implements interface in Java? Do they require to implement all methods?
+19. Can abstract class be final in Java?
+20. Can abstract class have static methods in Java?
+21. Is it necessary for abstract class to have abstract method?
+22. Can abstract class contains main method in Java?
+23. What do you mean by “Functional Interface”?
