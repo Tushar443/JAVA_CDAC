@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 interface Taxable {
 	double salesTax = 0.07;
 	double incomeTax = 0.105;
@@ -44,10 +46,11 @@ class Product implements Taxable {
 
 		System.out.printf("Sales TAX : %.3f", tax);
 	}
-
 }
 
 public class Q49Interface {
+	public static Scanner sc = new Scanner(System.in);
+
 	public static void main(String[] args) {
 		Taxable t = new Employee(1, "Tushar", 45000);
 		t.calcTax();
