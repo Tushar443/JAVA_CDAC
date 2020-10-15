@@ -21,7 +21,7 @@
 //			Statement s =con.createStatement();
 //			String query ="Insert into student values ("+uno+",'"+name+"',"+fee+",'"+course+"');";
 //			System.out.println(query);
-////			int i = s.executeUpdate("Insert into student values(101,'Tushar',9999,'dac');");
+//			int i = s.executeUpdate("Insert into student values(101,'Tushar',9999,'dac');");
 //			con.close();
 //			System.out.println(" Record Added");
 //		} catch (ClassNotFoundException e) {

@@ -1,12 +1,10 @@
-interface Foo1{
+interface Foo{
 	default void m1(){
 		System.out.println("default inteface method");
 	}
 }
-class Bar implements Foo1{
-//    public void m1(){
-// 		System.out.println("Deault Bar m1");
-// 	}
+class Bar implements Foo{
+	
 }
 class Demo1{
 	public static void main(String args[]){
