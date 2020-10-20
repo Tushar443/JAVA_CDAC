@@ -9,24 +9,19 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 @WebServlet("/Electric")
 public class Electric extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		RequestDispatcher rq = request.getRequestDispatcher("header");
-		rq.include(request, response);
-		
 		String pc = request.getParameter("Oven");
-		
+		HttpSession ss = request.getSession(false);
 		if(pc!=null) {
-			Cookie cooki = new Cookie("item3", pc);
-			response.addCookie(cooki);
+			ss.setAttribute("MyOven", pc);
 		}
-		
 		String tv = request.getParameter("Charger");
 		
 		if(tv!=null) {
-			Cookie cooki = new Cookie("item4", tv);
-			response.addCookie(cooki);
+			ss.setAttribute("MyCharger", tv);
 		}
 		response.sendRedirect("HomeApp.html");
 	}

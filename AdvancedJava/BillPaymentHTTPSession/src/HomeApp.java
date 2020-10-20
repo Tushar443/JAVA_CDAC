@@ -11,22 +11,37 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 @WebServlet("/HomeApp")
 public class HomeApp extends HttpServlet {
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
 		response.setContentType("text/html");
 		ArrayList<String> col = new ArrayList<String>();
 		PrintWriter out = response.getWriter();
-		Cookie arr[] = request.getCookies();
-		RequestDispatcher rq = request.getRequestDispatcher("header");
-		rq.include(request, response);
-		if(arr!=null) {
-			for(Cookie c : arr) {
-				col.add(c.getValue());
-			}
+		HttpSession ss = request.getSession(false);
+		
+		String p = (String) ss.getAttribute("Mypc");
+		if(p!=null) {
+			col.add(p);
 		}
+		
+		String q = (String) ss.getAttribute("Mytv");
+		if(p!=null) {
+			col.add(q);
+		}
+		
+		String r = (String) ss.getAttribute("MyOven");
+		if(p!=null) {
+			col.add(r);
+		}
+		
+		String s = (String) ss.getAttribute("MyCharger");
+		if(p!=null) {
+			col.add(s);
+		}
+		
+		
 		String pc = request.getParameter("Fan");
 		
 		if(pc!=null) {

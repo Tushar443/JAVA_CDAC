@@ -16,6 +16,9 @@ import javax.servlet.http.HttpServletResponse;
 public class Electronic extends HttpServlet {	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+		RequestDispatcher rq = request.getRequestDispatcher("header");
+		rq.include(request, response);
+		
 		String pc = request.getParameter("pc");
 		
 		if(pc!=null) {
