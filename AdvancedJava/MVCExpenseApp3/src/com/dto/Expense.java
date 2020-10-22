@@ -32,11 +32,11 @@ public class Expense {
 	public void setPrice(float price) {
 		this.price = price;
 	}
-	public String getPurDate() {
+	public String getPurchaseDate() {
 		return purchaseDate;
 	}
-	public void setPurDate(String purDate) {
-		this.purchaseDate = purDate;
+	public void setPurchaseDate(String purchaseDate) {
+		this.purchaseDate = purchaseDate;
 	}
 	@Override
 	public String toString() {

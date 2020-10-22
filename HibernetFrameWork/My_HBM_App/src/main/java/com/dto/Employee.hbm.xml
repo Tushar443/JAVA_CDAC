@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 22 Oct, 2020 9:49:50 AM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping >
+    <class name="com.dto.Employee" table="EMPLOYEE">
+        <id name="empid" type="int">
+            <column name="empId"/>
+            <generator class="assigned" />
+        </id>
+        <property name="empName" type="java.lang.String">
+            <column name="EMPNAME" />
+        </property>
+        <property name="basicSalary" type="float">
+            <column name="BASICSALARY" />
+        </property>
+        <property name="dept" type="java.lang.String">
+            <column name="DEPT" />
+        </property>
+        <property name="joinDate" type="java.util.Date">
+            <column name="JOINDATE" />
+        </property>
+    </class>
+</hibernate-mapping>

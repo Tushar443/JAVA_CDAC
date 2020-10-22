@@ -27,7 +27,7 @@ public class ExpenseDaoImple implements IExpenseDao {
 			PreparedStatement ps = con.prepareStatement("insert into expense(item_name,price,pur_date,user_id values(?,?,?,?)");
 			ps.setString(1, ex.getItemName());
 			ps.setFloat(2,ex.getPrice());
-			ps.setString(3, ex.getPurDate());
+			ps.setString(3, ex.getPurchaseDate());
 			ps.setInt(4, ex.getUserId());
 			 i = ps.executeUpdate();
 			ps.close();

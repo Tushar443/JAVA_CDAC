@@ -30,11 +30,11 @@ public class Q3 extends HttpServlet {
 			ResultSet rs =stat.executeQuery(s);
 			
 			while(rs.next()) {
-				out.print("SRNO : "+rs.getInt(1)+" ");
-				out.print("Name : "+rs.getString(2)+" ");
-				out.print("Marks : "+rs.getInt(3)+" ");
-				out.print("Date of Birth  : "+rs.getDate(4)+" ");
-	
+				out.print("<h3>SRNO : "+rs.getInt(1)+" </h3>");
+				out.print("<h3>Name : "+rs.getString(2)+"</h3> ");
+				out.print("<h3>Marks : "+rs.getInt(3)+"</h3> ");
+				out.print("<h3>Date of Birth  : "+rs.getDate(4)+"</h3> ");
+				out.print("<h3>#########################################</h3>");
 			}
 			
 			con.close();
