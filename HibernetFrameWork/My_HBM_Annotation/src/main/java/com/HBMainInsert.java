@@ -12,7 +12,7 @@ import org.hibernate.cfg.Configuration;
 
 import com.dto.Employee;
 
-public class HBMain {
+public class HBMainInsert {
 	public static void main(String[] args) throws HibernateException {
 //		Configuration cfg = new Configuration().configure();
 //		StandardServiceRegistryBuilder ssrb = new StandardServiceRegistryBuilder();
@@ -21,7 +21,7 @@ public class HBMain {
 //		SessionFactory sf = cfg.buildSessionFactory(ssr);
 //		Session s = sf.openSession();
 //		Transaction tr = s.beginTransaction();
-//		Employee e = new Employee(102, "Prakssh", 9999.50f, "IT", new Date());
+//		Employee e = new Employee(101, "ram", 99999.50f, "cs", new Date());
 //		s.save(e);
 //		tr.commit();
 //		s.close();

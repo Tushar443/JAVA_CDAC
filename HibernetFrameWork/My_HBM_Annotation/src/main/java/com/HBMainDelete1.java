@@ -12,21 +12,8 @@ import org.hibernate.cfg.Configuration;
 
 import com.dto.Employee;
 
-public class HBMain {
+public class HBMainDelete1 {
 	public static void main(String[] args) throws HibernateException {
-//		Configuration cfg = new Configuration().configure();
-//		StandardServiceRegistryBuilder ssrb = new StandardServiceRegistryBuilder();
-//		ssrb.applySettings(cfg.getProperties());
-//		StandardServiceRegistry ssr = ssrb.build();
-//		SessionFactory sf = cfg.buildSessionFactory(ssr);
-//		Session s = sf.openSession();
-//		Transaction tr = s.beginTransaction();
-//		Employee e = new Employee(102, "Prakssh", 9999.50f, "IT", new Date());
-//		s.save(e);
-//		tr.commit();
-//		s.close();
-//		sf.close();
-		
 		
 		Configuration cfg = new Configuration().configure();
 		StandardServiceRegistryBuilder ssrb = new StandardServiceRegistryBuilder();
@@ -39,9 +26,9 @@ public class HBMain {
 		Session s = sf.openSession();
 		Transaction tr = s.beginTransaction();
 		
-		Employee e = new Employee(102, "Thunder", 234.223f, "EXTC", new Date());
+		Employee e = new Employee(104);
 		
-		s.save(e);
+		s.delete(e);
 		
 		tr.commit();
 		
