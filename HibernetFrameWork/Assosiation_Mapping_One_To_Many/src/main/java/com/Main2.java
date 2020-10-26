@@ -8,8 +8,8 @@ import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 
-import com.dto.Department;
-import com.dto.Employee;
+import com.dto.Category;
+import com.dto.Item;
 
 public class Main2 {
 	public static void main(String[] args) throws HibernateException {
@@ -21,11 +21,12 @@ public class Main2 {
 		Session s = sf.openSession();
 		Transaction tr = s.beginTransaction();
 
-		Department d = (Department) s.get(Department.class, 10);
-		Employee e1 = new Employee(107, "Kishore");
-		e1.setDept(d);
+		Item item = (Item) s.get(Item.class, 1);
 
-		s.save(e1);
+
+		Category c = new Category(20, "HOme");
+		s.delete(item);
+
 
 		tr.commit();
 		s.close();

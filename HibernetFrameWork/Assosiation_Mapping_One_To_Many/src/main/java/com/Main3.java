@@ -1,6 +1,10 @@
 package com;
 
+import java.util.List;
+import java.util.Set;
+
 import org.hibernate.HibernateException;
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -8,10 +12,10 @@ import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 
-import com.dto.Department;
-import com.dto.Manager;
+import com.dto.Category;
+import com.dto.Item;
 
-public class Main4 {
+public class Main3 {
 	public static void main(String[] args) throws HibernateException {
 		Configuration cfg = new Configuration().configure();
 		StandardServiceRegistryBuilder ssrb = new StandardServiceRegistryBuilder();
@@ -21,11 +25,17 @@ public class Main4 {
 		Session s = sf.openSession();
 		Transaction tr = s.beginTransaction();
 
-		Department d = new Department(20, "IT");
-		Manager m = new Manager(102, "Thunder");
-		m.setDept(d);
-		s.save(d);
-		s.save(m);
+		Query q = s.createQuery("from Category");
+		List<Category> c = q.list();
+		for (Category ca : c) {
+			System.out.println(ca);
+			Set<Item> items = ca.getItems();
+			for (Item i : items) {
+				System.out.println(i);
+
+			}
+		}
+
 
 		tr.commit();
 		s.close();

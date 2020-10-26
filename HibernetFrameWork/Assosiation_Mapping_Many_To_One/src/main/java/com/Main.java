@@ -9,7 +9,7 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 
 import com.dto.Department;
-import com.dto.Manager;
+import com.dto.Employee;
 
 public class Main {
 	public static void main(String[] args) throws HibernateException {
@@ -22,10 +22,10 @@ public class Main {
 		Transaction tr = s.beginTransaction();
 
 		Department d = new Department(10, "cs");
-		Manager m = new Manager(101, "Tushar");
-		m.setDept(d);
+		Employee e1 = new Employee(102, "Tusahr");
+		e1.setDept(d);
 		s.save(d);
-		s.save(m);
+		s.save(e1);
 
 		tr.commit();
 		s.close();
