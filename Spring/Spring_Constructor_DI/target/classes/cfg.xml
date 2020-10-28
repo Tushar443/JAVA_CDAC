@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
+		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd">
+	<!--
+	<bean id="myb" class="com.cdac.comp.MyBean">
+		<constructor-arg value="101" type="int"></constructor-arg>
+		<constructor-arg value="Tushar" type="String"></constructor-arg>
+	</bean>
+	
+	ERROR 
+	<bean id="myb1" class="com.cdac.comp.MyBean">
+		<constructor-arg value="102" ></constructor-arg>
+		<constructor-arg value="Kishore" ></constructor-arg>
+	</bean>
+	 -->
+	 <bean id="myb1" class="com.cdac.comp.MyBean">
+		<constructor-arg index="1" value="102" ></constructor-arg>
+		<constructor-arg index="0" value="Kishore" ></constructor-arg>
+	</bean>
+</beans>

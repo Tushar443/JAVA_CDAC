@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd">
+<bean id="myCall" class="com.cdac.comp.MyCall" >
+	
+	<property name="myList">
+		<list>
+			<value>List Item 1</value>
+			<value>List Item 2</value>
+		</list>	
+	</property>
+	<property name="mySet">
+	<set>
+	<value>Set Item 1</value>
+	<value>Set Item 2</value>
+	</set>
+	</property>
+	<property name="myMap">
+	<map>
+		<entry key="map key 1" value="Map Value 1"></entry>
+		<entry key="map key 2" value="Map Value 2"></entry>
+	</map>
+	</property>
+	<property name="properties">
+		<props>
+			<prop key="prop" >Properties 1</prop>
+			<prop key="prop1">Properties 2</prop>
+		</props>
+	</property>
+	<property name="arr">
+	<array>
+	<value>Array 1</value>
+	<value>Array 2</value>
+	</array>
+	</property>
+</bean>
+
+</beans>
