@@ -20,8 +20,9 @@
 -->	
  
 <bean id="myDao" class="com.cdac.comp.MyDao"></bean>
-<bean id="serv" class="com.cdac.comp.MyService" autowire="constructor">
-	
+
+<bean id="serv" class="com.cdac.comp.MyService" autowire="byType">
+	<property name="serviceID" value="1"></property>
 </bean>
 
 </beans>

@@ -9,20 +9,17 @@
 		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
 		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd">
+	
+<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+	<property name="driverClassName" value ="com.mysql.cj.jdbc.Driver"></property>	
+	<property name="url" value="jdbc:mysql://localhost:3306/cdac20"></property>
+	<property name="username" value ="root"></property>
+	<property name="password" value="@Tushar44"></property>
+	</bean>
+	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate" autowire="byType">
+	
+	</bean>
+	
 
-<!-- 
-<bean id="myDao" class="com.cdac.comp.MyDao"></bean>
-<bean id="serv" class="com.cdac.comp.MyService" autowire="byName">
--->
-<!--
-<bean id="myDao1" class="com.cdac.comp.MyDao"></bean>
-<bean id="serv" class="com.cdac.comp.MyService" autowire="byType">
--->	
- 
-<bean id="myDao" class="com.cdac.comp.MyDao"></bean>
-
-<bean id="serv" class="com.cdac.comp.MyService" autowire="byType">
-	<property name="serviceID" value="1"></property>
-</bean>
 
 </beans>

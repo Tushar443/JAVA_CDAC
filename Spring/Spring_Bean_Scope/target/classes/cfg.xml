@@ -10,19 +10,12 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
 		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd">
 
-<!-- 
-<bean id="myDao" class="com.cdac.comp.MyDao"></bean>
-<bean id="serv" class="com.cdac.comp.MyService" autowire="byName">
--->
-<!--
-<bean id="myDao1" class="com.cdac.comp.MyDao"></bean>
-<bean id="serv" class="com.cdac.comp.MyService" autowire="byType">
--->	
- 
-<bean id="myDao" class="com.cdac.comp.MyDao"></bean>
 
-<bean id="serv" class="com.cdac.comp.MyService" autowire="byType">
-	<property name="serviceID" value="1"></property>
-</bean>
+<bean id="dao" class="com.cdac.comp.MyDao" scope="singleton"></bean>
+<bean id="dao" class="com.cdac.comp.MyDao" scope="prototype"></bean>
+<bean id="dao" class="com.cdac.comp.MyDao" scope="request"></bean>
+<bean id="dao" class="com.cdac.comp.MyDao" scope="session"></bean>
+<bean id="dao" class="com.cdac.comp.MyDao" scope="global"></bean>
+
 
 </beans>
