@@ -1,14 +1,29 @@
 package com.cdac.dto;
 
+import org.springframework.stereotype.Component;
+
 public class Expense {
 	private int expenseId;
+	public int getExpenseId() {
+		return expenseId;
+	}
+	public void setExpenseId(int expenseId) {
+		this.expenseId = expenseId;
+	}
 	private String itemName;
 	private float price;
 	private String purchaseDate;
 	private int userId;
 	public Expense() {
+		
+	}
+	public Expense(String itemName, float price, String purchaseDate, int userId) {
 		super();
-		// TODO Auto-generated constructor stub
+		this.expenseId = expenseId;
+		this.itemName = itemName;
+		this.price = price;
+		this.purchaseDate = purchaseDate;
+		this.userId = userId;
 	}
 	public Expense(int expenseId, String itemName, float price, String purchaseDate, int userId) {
 		super();
