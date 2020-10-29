@@ -14,7 +14,7 @@ import org.springframework.stereotype.Repository;
 import com.cdac.dto.Expense;
 
 @Repository
-public class ExpenseDaoImpl implements IExpense {
+public class ExpenseDaoImpl implements IExpenseDao {
 
 	@Autowired
 	private JdbcTemplate jdbcTemplate;

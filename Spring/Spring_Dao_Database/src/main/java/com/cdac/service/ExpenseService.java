@@ -1,16 +1,20 @@
 package com.cdac.service;
 
+
+
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.cdac.dao.ExpenseDaoImpl;
-import com.cdac.dao.IExpense;
+
+import com.cdac.dao.IExpenseDao;
 import com.cdac.dto.Expense;
 @Service
 public class ExpenseService implements IExpenseService {
-
-	private IExpense expenseDao;
+	@Autowired
+	private IExpenseDao expenseDao;
 
 	public void addExpense(Expense e) {
 		expenseDao.insertExpense(e);

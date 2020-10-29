@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.cdac.dto.Expense;
 
-public interface IExpense {
+public interface IExpenseDao {
 	void insertExpense(Expense e);
 	void deleteExpense(int expenseId);
 	Expense selectExpese(int expenseId);
