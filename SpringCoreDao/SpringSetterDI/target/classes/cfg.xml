@@ -11,10 +11,7 @@
 		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd">
 
 
-<bean id="dao" class="com.cdac.comp.MyDao"></bean>
-<bean id="serv" class="com.cdac.comp.MyService">
-	<property name="myDao" ref="dao"></property>
-		
-</bean>
+
+<context:component-scan base-package="com.cdac"></context:component-scan>
 
 </beans>
