@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Admin Page</title>
 </head>
 <body>
 <h1>Welcome To Home  <%= (session.getAttribute("user") !=null)?((User)session.getAttribute("user")).getUserName(): "!!!!!!!!!"%></h1>
@@ -16,7 +16,7 @@
 </h3>
 
 <h3>
-<a href="searchByAdmin.htm">All Trains</a>
+<a href="searchByAdmin.htm">Train Details</a>
 </h3>
 
 <h3>

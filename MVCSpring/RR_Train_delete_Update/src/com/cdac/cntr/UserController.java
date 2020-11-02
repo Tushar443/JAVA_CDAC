@@ -36,11 +36,17 @@ public class UserController {
 
 	@RequestMapping(value = "/login.htm", method = RequestMethod.POST)
 	public String login(User user, ModelMap map, HttpSession session) {
-		User b = userService.findUser(user);
-		if (b.getUserName().equalsIgnoreCase("admin") && b.getUserPass().equalsIgnoreCase("1234")) {
-			session.setAttribute("user", user);
-			return "home_admin";
-		} else if (b.getUserName() != "admin") {
+
+		System.out.println(user.getUserName().equalsIgnoreCase("admin") + " con 40");
+		if (user.getUserName().equalsIgnoreCase("admin")) {
+			boolean a = userService.findAdmin(user);
+			if (a) {
+				session.setAttribute("user", user);
+				return "home_admin";
+			}
+		}
+		boolean b = userService.findUser(user);
+		if (b) {
 			session.setAttribute("user", user);
 			return "home";
 		} else {

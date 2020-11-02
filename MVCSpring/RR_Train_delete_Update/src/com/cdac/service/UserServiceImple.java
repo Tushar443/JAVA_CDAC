@@ -17,10 +17,16 @@ public class UserServiceImple implements IUserService {
 	}
 
 	@Override
-	public User findUser(User user) {
-
+	public boolean findUser(User user) {
+		System.out.println("user");
 		return userDao.checkUser(user);
 
+	}
+
+	@Override
+	public boolean findAdmin(User user) {
+		System.out.println("Admin");
+		return userDao.checkAdmin(user);
 	}
 
 }

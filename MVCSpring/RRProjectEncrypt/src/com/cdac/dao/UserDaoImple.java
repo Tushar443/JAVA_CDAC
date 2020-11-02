@@ -1,5 +1,6 @@
 package com.cdac.dao;
 
+import java.util.Base64;
 import java.util.List;
 
 import org.hibernate.HibernateException;
@@ -25,6 +26,9 @@ public class UserDaoImple implements IUserDao {
 			@Override
 			public Void doInHibernate(Session session) throws HibernateException {
 				org.hibernate.Transaction tr = session.beginTransaction();
+
+				String encryptedPass = getEncryptPass(user.getUserPass());
+				user.setUserPass(encryptedPass);
 				session.save(user);
 				tr.commit();
 				session.flush();
@@ -36,26 +40,43 @@ public class UserDaoImple implements IUserDao {
 
 	}
 
+	protected String getEncryptPass(String userPass) {
+		return Base64.getEncoder().encodeToString(userPass.getBytes());
+	}
+
 	@Override
 	public boolean checkUser(User user) {
 		boolean b = hibernateTemplate.execute(new HibernateCallback<Boolean>() {
 
 			@Override
 			public Boolean doInHibernate(Session session) throws HibernateException {
+				boolean flag = false;
 				Transaction tr = session.beginTransaction();
-				Query q = session.createQuery("from User where user_name =? and user_pass=?");
+				Query q = session.createQuery("from User where user_name =?");
 				q.setString(0, user.getUserName());
-				q.setString(1, user.getUserPass());
+
 				List<User> li = q.list();
-				boolean flag = !li.isEmpty();
-				user.setUserId(li.get(0).getUserId());
-				tr.commit();
-				session.flush();
-				session.close();
+				if (!li.isEmpty()) {
+					User newUser = li.get(0);
+					String decryptedPass = getDecryptPass(newUser.getUserPass());
+					if (user.getUserPass().equalsIgnoreCase(decryptedPass)) {
+						flag = true;
+						user.setUserId(li.get(0).getUserId());
+						tr.commit();
+						session.flush();
+						session.close();
+					}
+				}
 				return flag;
+
 			}
 		});
 		return b;
+	}
+
+	protected String getDecryptPass(String userPass) {
+
+		return new String(Base64.getMimeDecoder().decode(userPass));
 	}
 
 }
