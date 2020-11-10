@@ -41,7 +41,7 @@
 			</tr>
 		<%
 		for(User ur : plist){
-			if(ur!=null){
+			if(ur!=null && ur.getUserId()>0){
 		%>
 			<tr>
 				<th> User Details</th>
@@ -72,7 +72,7 @@
 		%>	
 		<tr>
 		<td>
-			<a href="home_admin.jsp">Back</a>
+			<a href="searchByAdmin.htm">Back</a>
 		</td>
 		</tr>
 	</table>
