@@ -3,6 +3,8 @@ package com.cdac.cntr;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -15,6 +17,8 @@ import com.cdac.dto.Car;
 import com.cdac.service.CarService;
  
 @RestController
+@SpringBootApplication
+@CrossOrigin(origins = "*")
 public class CarController {
 	
 	@Autowired
@@ -24,7 +28,6 @@ public class CarController {
 	public String carAdd(@RequestBody Car car) {
 		carService.addCar(car);
 		return "success";
-		
 	}
 
 	@PostMapping(value = "car_del/{id}")

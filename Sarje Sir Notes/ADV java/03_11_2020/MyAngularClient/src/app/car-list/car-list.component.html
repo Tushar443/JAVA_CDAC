@@ -1,0 +1,9 @@
+<p>car-list works!</p>
+<h2>Car List</h2>
+
+<div *ngFor="let car of cars">
+  {{car.name}}
+  <!-- <a mat-button [routerLink]="['/car-edit', car.id]">{{car.name}}</a> -->
+</div>
+
+<button mat-fab color="primary" [routerLink]="['/car-add']">Add</button>
