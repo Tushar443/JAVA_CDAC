@@ -1,0 +1,52 @@
+<app-header></app-header> Hello {{ title }} + {{ num1 + 16 }}
+<!-- <br>
+Property Binding:--
+<input type="text" value="{{title}}" name="uname"><br>
+
+<table border="2">
+
+    <tr>
+        <td colspan="2">td1</td>
+        <td>td3</td>
+        <td>td3</td>
+    </tr>
+
+    <tr>
+        <td [attr.colspan]="cs">td1</td>
+        <td [colSpan]="cs">td3</td>
+        <td>td3</td>
+    </tr>
+    <tr>
+        <td >td1</td>
+        <td>td3</td>
+        <td [colSpan]="cs">td3</td>
+    </tr>
+</table> -->
+<!-- <br>
+JavaScript Expressions @@@@@@@@@@@@@@@@@@@<br>
+{{2==2 ? title :"Restrict"}} <br>
+{{2==1 ? title :"Restrict"}} <br> -->
+
+<!-- <div class="myClass">Hello {{title}}</div> -->
+<!-- <div class="myClass2 myClass" [className]="cssClass">Class Binding </div> -->
+<!-- <div class="myClass2 myClass">Class Binding  hide the class binding</div> -->
+<!-- <div [className]="cssClass">Class Binding </div>
+
+
+<div [className]="newCSSFun()">Function Call CSS</div>
+
+
+<div [className] ="functionTrue()?css:css2">Function Returning true</div> -->
+<!-- 
+<div [class.myClass]="true">Ture Direct Class Attribute</div>
+<div [class.myClass2]="true" [class.myClass]="true">False Not Apply</div> -->
+
+
+<!-- <div [style.color]="'blue'">Style Binding</div>
+<div [style.color]="'blue'" [style.background-color]="'gray'">Style Binding</div>
+<div [style.color]="'blue'" [style.background-color]="'gray'" [style.border]="'5px solid black'">Style Binding</div> -->
+
+
+<div [style.color]="bool1 ==true ? 'blue':'red'">Style Binding</div> 
+
+<router-outlet></router-outlet>
