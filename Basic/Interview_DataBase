@@ -62,4 +62,42 @@ insert into orders values (3001,18.69,'1990-10-03',2008,1007),
 (3010,1309.95,'1990-10-06',2004,1002),
 (3011,9891.88,'1990-10-06',2006,1001);
 
+use practice;
 
+select * from customer;
+select * from orders;
+select * from sales_people;
+
+select distinct Cname ,orders.Snum from customer,orders
+where customer.Snum=orders.Snum;
+
+select distinct Cname ,orders.Snum from customer left outer join orders
+on customer.Snum=orders.Snum;
+
+
+create table t2 (
+	num int
+);
+
+insert into t2 values(10),(20),(30),(4),(5),(60),(70),(8),(90);
+
+
+select * from t1,t2 where t1.num =t2.num;
+
+select t1.num as T1Num , t2.num as T2Num from t1 left outer join t2 
+on t1.num= t2.num;
+
+select t1.num as T1Num , t2.num as T2Num from t1 right outer join t2 
+on t1.num= t2.num;
+
+
+
+
+select t1.num as T1Num , t2.num as T2Num from t1 left outer join t2 
+on t1.num= t2.num
+union
+select t1.num as T1Num , t2.num as T2Num from t1 right outer join t2 
+on t1.num= t2.num;
+
+
+select * from t2,t1;
