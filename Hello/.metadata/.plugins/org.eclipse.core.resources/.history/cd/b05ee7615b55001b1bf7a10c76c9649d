@@ -1,0 +1,20 @@
+import java.util.*;
+
+class DemoTh implements new Runnable() {
+	public void run() {
+		
+	}
+}
+
+
+
+public class ThreadDemo {
+	public static void main(String[] args) {
+		
+	}
+	
+	
+	
+
+}
+

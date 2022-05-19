@@ -1,8 +1,13 @@
 package com.stringDemo;
 
+import java.util.HashSet;
+
 public class StringDemo {
 
 	public static void main(String[] args) {
+		HashSet<Integer> hs = new HashSet<Integer>();
+		
+		
 		
 		String s = "java";
 		char demoarr[]= new char[10];

@@ -1,0 +1,13 @@
+package com.cdac.service;
+
+import com.cdac.dto.User;
+
+public class UserImple implements IUserService {
+
+	@Override
+	public void addUser(User user) {
+		
+
+	}
+
+}
