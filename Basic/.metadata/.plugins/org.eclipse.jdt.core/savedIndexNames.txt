@@ -1,0 +1,3 @@
+INDEX VERSION 1.131+/home/thunderstorm/Desktop/Git/JAVA_CDAC/Basic/.metadata/.plugins/org.eclipse.jdt.core
+3660613378.index
+1446069458.index

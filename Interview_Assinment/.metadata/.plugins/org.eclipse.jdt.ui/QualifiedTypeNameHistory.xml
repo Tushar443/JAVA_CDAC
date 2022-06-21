@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="com.tushar.TreeDemo"/>
+    <fullyQualifiedTypeName name="com.tushar.Node"/>
+    <fullyQualifiedTypeName name="com.tushar.LinkNode"/>
+    <fullyQualifiedTypeName name="com.DS.TwoStack"/>
+    <fullyQualifiedTypeName name="com.DS.TwoStacks"/>
+    <fullyQualifiedTypeName name="java.util.Queue"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="java.util.Stack"/>
+    <fullyQualifiedTypeName name="com.DS.Stacks"/>
+    <fullyQualifiedTypeName name="com.sun.org.apache.bcel.internal.classfile.Node"/>
+    <fullyQualifiedTypeName name="com.LinkList.LinkList"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="com.LinkList.IntersectionLinkList"/>
+    <fullyQualifiedTypeName name="sun.awt.image.ImageWatched.Link"/>
+    <fullyQualifiedTypeName name="java.util.LinkedList"/>
+    <fullyQualifiedTypeName name="com.LinkList.LinkList1"/>
+    <fullyQualifiedTypeName name="com.LinkList.Node"/>
+    <fullyQualifiedTypeName name="com.LinkList.LinkList4"/>
+    <fullyQualifiedTypeName name="java.lang.Thread"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.util.HashSet"/>
+    <fullyQualifiedTypeName name="javax.persistence.OneToMany"/>
+</qualifiedTypeNameHistroy>

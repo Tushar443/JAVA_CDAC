@@ -1,0 +1,18 @@
+package com.cdac.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.cdac.dto.User;
+@Service
+public class UserImple implements IUserService {
+
+	@Autowired
+	IUserService userService;
+	
+	@Override
+	public void addUser(User user) {
+		userService.addUser(user);
+	}
+
+}
